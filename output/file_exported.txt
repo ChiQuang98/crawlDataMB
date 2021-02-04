@@ -3,6 +3,11 @@ Tên Class: ABSurveyException
 Type Return|Method Name|Description
 ||
 
+Tên Package: vn.mobifone.bigdata.callspamapi.repository
+Tên Class: ACallMaxRepositoryCustom
+Type Return|Method Name|Description
+java.util.List<ACallMaxModel>|getACallMax()|
+
 Tên Package: vn.mobifone.bigdata.callspamapi.controller
 Tên Class: ACallMaxController
 Type Return|Method Name|Description
@@ -20,8 +25,17 @@ void|setNgay​(java.util.Date ngay)|
 void|setSlcuocgoi​(java.lang.Long slcuocgoi)|
 java.lang.String|toString()|
 
-Tên Package: vn.mobifone.bigdata.callspamapi.repository
-Tên Class: ACallMaxRepositoryCustom
+Tên Package: vn.mobifone.bigdata.callspamapi.model
+Tên Class: ABSurveyResModal
+Type Return|Method Name|Description
+java.lang.String|getErrCode()|
+java.lang.String|getErrMessage()|
+void|setErrCode​(java.lang.String errCode)|
+void|setErrMessage​(java.lang.String errMessage)|
+java.lang.String|toString()|
+
+Tên Package: vn.mobifone.bigdata.callspamapi.repositoryImp
+Tên Class: ACallMaxRepositoryCustomImp
 Type Return|Method Name|Description
 java.util.List<ACallMaxModel>|getACallMax()|
 
@@ -39,43 +53,32 @@ void|setTransId​(long transid)|
 java.lang.String|toString()|
 boolean|vaidate()|
 
-Tên Package: vn.mobifone.bigdata.callspamapi.repositoryImp
-Tên Class: ACallMaxRepositoryCustomImp
-Type Return|Method Name|Description
-java.util.List<ACallMaxModel>|getACallMax()|
-
-Tên Package: vn.mobifone.bigdata.callspamapi.model
-Tên Class: ABSurveyResModal
-Type Return|Method Name|Description
-java.lang.String|getErrCode()|
-java.lang.String|getErrMessage()|
-void|setErrCode​(java.lang.String errCode)|
-void|setErrMessage​(java.lang.String errMessage)|
-java.lang.String|toString()|
-
-Tên Package: vn.mobifone.bigdata.callspamapi.repositoryImp
-Tên Class: ANumberRepositoryCustomImp
-Type Return|Method Name|Description
-java.util.List<ANumberModel>|getANumberActive()|
-
-Tên Package: vn.mobifone.bigdata.callspamapi.env
-Tên Class: AppConstant
-Type Return|Method Name|Description
-||
-
 Tên Package: vn.mobifone.bigdata.callspamapi.controller
 Tên Class: ANumberController
 Type Return|Method Name|Description
 java.lang.Object|meetSurvey​(java.lang.String version,
 javax.servlet.http.HttpServletRequest request)|
 
-Tên Package: vn.mobifone.bigdata.callspamapi.env
-Tên Class: AppEnv
+Tên Package: vn.mobifone.bigdata.callspamapi.model
+Tên Class: ANumberModel
 Type Return|Method Name|Description
-||
+java.util.Date|getCreatedAt()|
+java.lang.String|getIsdn()|
+java.lang.Integer|getStatus()|
+java.util.Date|getUpdatedAt()|
+void|setCreatedAt​(java.util.Date createdAt)|
+void|setIsdn​(java.lang.String isdn)|
+void|setStatus​(java.lang.Integer status)|
+void|setUpdatedAt​(java.util.Date updatedAt)|
+java.lang.String|toString()|
 
 Tên Package: vn.mobifone.bigdata.callspamapi.repository
 Tên Class: ANumberRepositoryCustom
+Type Return|Method Name|Description
+java.util.List<ANumberModel>|getANumberActive()|
+
+Tên Package: vn.mobifone.bigdata.callspamapi.repositoryImp
+Tên Class: ANumberRepositoryCustomImp
 Type Return|Method Name|Description
 java.util.List<ANumberModel>|getANumberActive()|
 
@@ -98,34 +101,25 @@ void|setStatus​(int status)|
 void|setUpdatedAt​(java.util.Date updatedAt)|
 java.lang.String|toString()|
 
-Tên Package: vn.mobifone.bigdata.callspamapi.env
-Tên Class: AppError
-Type Return|Method Name|Description
-||
-
-Tên Package: vn.mobifone.bigdata.callspamapi.repository
-Tên Class: BBlackListRepository
-Type Return|Method Name|Description
-||
-
-Tên Package: vn.mobifone.bigdata.callspamapi.utils
-Tên Class: AppUtil
-Type Return|Method Name|Description
-static java.lang.String|formatIsdn​(java.lang.String isdn)|
-static long|generateTransaction()|
-static long|getCurrentTimestamp()|
-
 Tên Package: vn.mobifone.bigdata.callspamapi.repository
 Tên Class: ApiSpamDailyTmpRepository
 Type Return|Method Name|Description
 ||
 
-Tên Package: vn.mobifone.bigdata.callspamapi.filter
-Tên Class: AuthFilter
+Tên Package: vn.mobifone.bigdata.callspamapi.env
+Tên Class: AppConstant
 Type Return|Method Name|Description
-void|doFilter​(javax.servlet.ServletRequest servletRequest,
-javax.servlet.ServletResponse servletResponse,
-javax.servlet.FilterChain filterChain)|
+||
+
+Tên Package: vn.mobifone.bigdata.callspamapi.env
+Tên Class: AppEnv
+Type Return|Method Name|Description
+||
+
+Tên Package: vn.mobifone.bigdata.callspamapi.env
+Tên Class: AppError
+Type Return|Method Name|Description
+||
 
 Tên Package: vn.mobifone.bigdata.callspamapi.env
 Tên Class: AppGlobal
@@ -136,20 +130,36 @@ static void|removeAllPrefix()|
 static void|setPREFIX_NUMBER​(java.util.List<java.lang.String> PREFIX_NUMBER)|
 static void|setTIME_VALID_IN_SECOND​(int TIME_VALID_IN_SECOND)|
 
-Tên Package: vn.mobifone.bigdata.callspamapi.common
-Tên Class: Constant
+Tên Package: vn.mobifone.bigdata.callspamapi.model
+Tên Class: AppResModel
 Type Return|Method Name|Description
-||
+java.lang.String|getError()|
+java.lang.Object|getMessage()|
+java.lang.String|getPath()|
+int|getStatus()|
+java.lang.String|getTimestamp()|
+long|getTransactionId()|
+void|setError​(java.lang.String error)|
+void|setMessage​(java.lang.Object message)|
+void|setPath​(java.lang.String path)|
+void|setStatus​(int status)|
+void|setTimestamp​(java.lang.String timestamp)|
+void|setTransactionId​(long transactionId)|
+java.lang.String|toString()|
+
+Tên Package: vn.mobifone.bigdata.callspamapi.utils
+Tên Class: AppUtil
+Type Return|Method Name|Description
+static java.lang.String|formatIsdn​(java.lang.String isdn)|
+static long|generateTransaction()|
+static long|getCurrentTimestamp()|
 
 Tên Package: vn.mobifone.bigdata.callspamapi.filter
-Tên Class: FilterConfig
+Tên Class: AuthFilter
 Type Return|Method Name|Description
-org.springframework.boot.web.servlet.FilterRegistrationBean<AuthFilter>|authFilterRegistrationBean()|
-
-Tên Package: vn.mobifone.bigdata.callspamapi.data
-Tên Class: CreateSampleData
-Type Return|Method Name|Description
-void|test()|
+void|doFilter​(javax.servlet.ServletRequest servletRequest,
+javax.servlet.ServletResponse servletResponse,
+javax.servlet.FilterChain filterChain)|
 
 Tên Package: vn.mobifone.bigdata.callspamapi.utils
 Tên Class: AuthenticationUtil
@@ -173,14 +183,25 @@ void|setType​(int type)|
 void|setUpdatedAt​(java.util.Date updatedAt)|
 java.lang.String|toString()|
 
-Tên Package: vn.mobifone.bigdata.callspamapi.model
-Tên Class: DestCusResModel
+Tên Package: vn.mobifone.bigdata.callspamapi.repository
+Tên Class: BBlackListRepository
 Type Return|Method Name|Description
-java.lang.String|getIsdn()|
-boolean|isSendServey()|
-void|setIsdn​(java.lang.String isdn)|
-void|setSendServey​(boolean sendServey)|
-java.lang.String|toString()|
+||
+
+Tên Package: vn.mobifone.bigdata.callspamapi
+Tên Class: CallspamapiApplication
+Type Return|Method Name|Description
+static void|main​(java.lang.String[] args)|
+
+Tên Package: vn.mobifone.bigdata.callspamapi.common
+Tên Class: Constant
+Type Return|Method Name|Description
+||
+
+Tên Package: vn.mobifone.bigdata.callspamapi.data
+Tên Class: CreateSampleData
+Type Return|Method Name|Description
+void|test()|
 
 Tên Package: vn.mobifone.bigdata.callspamapi.model
 Tên Class: DestCusReqModel
@@ -192,16 +213,30 @@ void|setTransId​(long transId)|
 java.lang.String|toString()|
 
 Tên Package: vn.mobifone.bigdata.callspamapi.model
-Tên Class: ANumberModel
+Tên Class: DestCusResModel
 Type Return|Method Name|Description
-java.util.Date|getCreatedAt()|
+java.lang.String|getIsdn()|
+boolean|isSendServey()|
+void|setIsdn​(java.lang.String isdn)|
+void|setSendServey​(boolean sendServey)|
+java.lang.String|toString()|
+
+Tên Package: vn.mobifone.bigdata.callspamapi.filter
+Tên Class: FilterConfig
+Type Return|Method Name|Description
+org.springframework.boot.web.servlet.FilterRegistrationBean<AuthFilter>|authFilterRegistrationBean()|
+
+Tên Package: vn.mobifone.bigdata.callspamapi.model
+Tên Class: IsdnModel
+Type Return|Method Name|Description
+java.util.Date|getDateId()|
+java.lang.String|getDescription()|
 java.lang.String|getIsdn()|
 java.lang.Integer|getStatus()|
-java.util.Date|getUpdatedAt()|
-void|setCreatedAt​(java.util.Date createdAt)|
+void|setDateId​(java.util.Date dateId)|
+void|setDescription​(java.lang.String description)|
 void|setIsdn​(java.lang.String isdn)|
 void|setStatus​(java.lang.Integer status)|
-void|setUpdatedAt​(java.util.Date updatedAt)|
 java.lang.String|toString()|
 
 Tên Package: vn.mobifone.bigdata.callspamapi.model
@@ -220,35 +255,29 @@ void|setValue​(java.lang.String key,
 java.lang.String value,
 int timeout)|
 
-Tên Package: vn.mobifone.bigdata.callspamapi.model
-Tên Class: IsdnModel
+Tên Package: vn.mobifone.bigdata.callspamapi.schedule
+Tên Class: ScheduleTask
 Type Return|Method Name|Description
-java.util.Date|getDateId()|
-java.lang.String|getDescription()|
-java.lang.String|getIsdn()|
-java.lang.Integer|getStatus()|
-void|setDateId​(java.util.Date dateId)|
-void|setDescription​(java.lang.String description)|
-void|setIsdn​(java.lang.String isdn)|
-void|setStatus​(java.lang.Integer status)|
-java.lang.String|toString()|
+void|scheduleTaskWithCronExpression()|
+void|scheduleTaskWithFixedDelay()|
+void|scheduleTaskWithFixedRate()|
+void|scheduleTaskWithInitialDelay()|
 
 Tên Package: vn.mobifone.bigdata.callspamapi.model
-Tên Class: AppResModel
+Tên Class: ResponseModel
 Type Return|Method Name|Description
-java.lang.String|getError()|
-java.lang.Object|getMessage()|
-java.lang.String|getPath()|
-int|getStatus()|
-java.lang.String|getTimestamp()|
-long|getTransactionId()|
-void|setError​(java.lang.String error)|
-void|setMessage​(java.lang.Object message)|
-void|setPath​(java.lang.String path)|
-void|setStatus​(int status)|
-void|setTimestamp​(java.lang.String timestamp)|
-void|setTransactionId​(long transactionId)|
+java.lang.String|getIsdnError()|
+void|setIsdnError​(java.lang.String isdnError)|
 java.lang.String|toString()|
+
+Tên Package: vn.mobifone.bigdata.callspamapi.repository
+Tên Class: SpamDailyRepositoryCustom
+Type Return|Method Name|Description
+java.util.Map<java.lang.String,​java.lang.Object>|filterANumber​(java.lang.String source)|
+java.util.Map<java.lang.String,​java.lang.Object>|filterSpamDailyBySource​(java.lang.String source)|
+java.util.Map<java.lang.String,​java.lang.Object>|insertSpamDaily​(java.lang.String isdn,
+java.util.Date dateId,
+java.lang.String source)|
 
 Tên Package: vn.mobifone.bigdata.callspamapi.repositoryImp
 Tên Class: SpamDailyRepositoryCustomImpl
@@ -259,16 +288,45 @@ java.util.Map<java.lang.String,​java.lang.Object>|insertSpamDaily​(java.lang
 java.util.Date dateId,
 java.lang.String source)|
 
-Tên Package: vn.mobifone.bigdata.callspamapi
-Tên Class: CallspamapiApplication
+Tên Package: vn.mobifone.bigdata.callspamapi.appinterface
+Tên Class: SurveyChecking
 Type Return|Method Name|Description
-static void|main​(java.lang.String[] args)|
+boolean|isMeetSurvey​(java.lang.String isdn)|
+
+Tên Package: vn.mobifone.bigdata.callspamapi.repository
+Tên Class: SpamSourceApiTmpRepository
+Type Return|Method Name|Description
+||
 
 Tên Package: vn.mobifone.bigdata.callspamapi.controller
 Tên Class: SpamSourceController
 Type Return|Method Name|Description
 java.lang.Object|apiSpamDetection​(java.lang.String version,
 ListIsdnModel req)|
+
+Tên Package: vn.mobifone.bigdata.callspamapi.repository
+Tên Class: SpamSourceRepositoryCustom
+Type Return|Method Name|Description
+java.util.Map<java.lang.String,​java.lang.Object>|mergeSpamSourceApi()|
+java.util.Map<java.lang.String,​java.lang.Object>|updANumberApi()|
+java.util.Map<java.lang.String,​java.lang.Object>|updANumberFile()|
+
+Tên Package: vn.mobifone.bigdata.callspamapi.repositoryImp
+Tên Class: SpamSourceRepositoryCustomImpl
+Type Return|Method Name|Description
+java.util.Map<java.lang.String,​java.lang.Object>|mergeSpamSourceApi()|
+java.util.Map<java.lang.String,​java.lang.Object>|updANumberApi()|
+java.util.Map<java.lang.String,​java.lang.Object>|updANumberFile()|
+
+Tên Package: vn.mobifone.bigdata.callspamapi.controller
+Tên Class: SurveyCheckingController
+Type Return|Method Name|Description
+java.lang.Object|addSurvey​(ABSurveyReqModal requestBody,
+java.lang.String version,
+javax.servlet.http.HttpServletRequest request)|
+java.lang.Object|meetSurvey​(DestCusReqModel requestBody,
+java.lang.String version,
+javax.servlet.http.HttpServletRequest request)|
 
 Tên Package: vn.mobifone.bigdata.callspamapi.entity
 Tên Class: SpamSourceApiTmpEntity
@@ -289,60 +347,12 @@ void|setStatus​(int status)|
 void|setUpdatedAt​(java.util.Date updatedAt)|
 java.lang.String|toString()|
 
-Tên Package: vn.mobifone.bigdata.callspamapi.repository
-Tên Class: SpamDailyRepositoryCustom
-Type Return|Method Name|Description
-java.util.Map<java.lang.String,​java.lang.Object>|filterANumber​(java.lang.String source)|
-java.util.Map<java.lang.String,​java.lang.Object>|filterSpamDailyBySource​(java.lang.String source)|
-java.util.Map<java.lang.String,​java.lang.Object>|insertSpamDaily​(java.lang.String isdn,
-java.util.Date dateId,
-java.lang.String source)|
-
-Tên Package: vn.mobifone.bigdata.callspamapi.model
-Tên Class: ResponseModel
-Type Return|Method Name|Description
-java.lang.String|getIsdnError()|
-void|setIsdnError​(java.lang.String isdnError)|
-java.lang.String|toString()|
-
-Tên Package: vn.mobifone.bigdata.callspamapi.schedule
-Tên Class: ScheduleTask
-Type Return|Method Name|Description
-void|scheduleTaskWithCronExpression()|
-void|scheduleTaskWithFixedDelay()|
-void|scheduleTaskWithFixedRate()|
-void|scheduleTaskWithInitialDelay()|
-
-Tên Package: vn.mobifone.bigdata.callspamapi.repository
-Tên Class: SpamSourceApiTmpRepository
-Type Return|Method Name|Description
-||
-
-Tên Package: vn.mobifone.bigdata.callspamapi.repositoryImp
-Tên Class: SurveyReportRepositoryCustomImp
-Type Return|Method Name|Description
-ABSurveyResModal|addSurvey​(java.lang.String aNumber,
-java.lang.String bNumber,
-java.util.Date datetime)|
-
-Tên Package: vn.mobifone.bigdata.callspamapi.appinterface
-Tên Class: SurveyChecking
-Type Return|Method Name|Description
-boolean|isMeetSurvey​(java.lang.String isdn)|
-
-Tên Package: vn.mobifone.bigdata.callspamapi.repositoryImp
-Tên Class: SpamSourceRepositoryCustomImpl
-Type Return|Method Name|Description
-java.util.Map<java.lang.String,​java.lang.Object>|mergeSpamSourceApi()|
-java.util.Map<java.lang.String,​java.lang.Object>|updANumberApi()|
-java.util.Map<java.lang.String,​java.lang.Object>|updANumberFile()|
-
 Tên Package: vn.mobifone.bigdata.callspamapi.utils
 Tên Class: StringUtil
 Type Return|Method Name|Description
 static java.lang.String|dateToString​(java.util.Date date)|
 static java.lang.String|exceptionToString​(java.lang.Exception e)|
-static int| (char[] arr,
+static int|findIndex​(char[] arr,
 char t)|
 static java.lang.String|format​(long number,
 java.lang.String strPattern)|
@@ -368,21 +378,6 @@ int totalSegments)|
 static java.util.Date|toDate​(java.lang.String date)|
 static java.lang.String|utf16_to_utf8​(java.lang.String st)|
 
-Tên Package: vn.mobifone.bigdata.callspamapi.controller
-Tên Class: SurveyCheckingController
-Type Return|Method Name|Description
-java.lang.Object|addSurvey​(ABSurveyReqModal requestBody,
-java.lang.String version,
-javax.servlet.http.HttpServletRequest request)|
-java.lang.Object|meetSurvey​(DestCusReqModel requestBody,
-java.lang.String version,
-javax.servlet.http.HttpServletRequest request)|
-
-Tên Package: vn.mobifone.bigdata.callspamapi.appimplement
-Tên Class: SurveyCheckingImp
-Type Return|Method Name|Description
-boolean|isMeetSurvey​(java.lang.String isdn)|
-
 Tên Package: vn.mobifone.bigdata.callspamapi.repository
 Tên Class: SurveyReportRepositoryCustom
 Type Return|Method Name|Description
@@ -390,12 +385,22 @@ ABSurveyResModal|addSurvey​(java.lang.String aNumber,
 java.lang.String bNumber,
 java.util.Date datetime)|
 
-Tên Package: vn.mobifone.bigdata.callspamapi.repository
-Tên Class: SpamSourceRepositoryCustom
+Tên Package: vn.mobifone.bigdata.callspamapi.appimplement
+Tên Class: SurveyCheckingImp
 Type Return|Method Name|Description
-java.util.Map<java.lang.String,​java.lang.Object>|mergeSpamSourceApi()|
-java.util.Map<java.lang.String,​java.lang.Object>|updANumberApi()|
-java.util.Map<java.lang.String,​java.lang.Object>|updANumberFile()|
+boolean|isMeetSurvey​(java.lang.String isdn)|
+
+Tên Package: vn.mobifone.bigdata.callspamapi.repositoryImp
+Tên Class: SurveyReportRepositoryCustomImp
+Type Return|Method Name|Description
+ABSurveyResModal|addSurvey​(java.lang.String aNumber,
+java.lang.String bNumber,
+java.util.Date datetime)|
+
+Tên Package: vn.mobifone.bigdata.callspamapi.repository
+Tên Class: SysConfigRepository
+Type Return|Method Name|Description
+SysConfigEntity|getByKey​(java.lang.String key)|
 
 Tên Package: vn.mobifone.bigdata.callspamapi.entity
 Tên Class: SysConfigEntity
@@ -407,9 +412,4 @@ void|setId​(java.lang.Long id)|
 void|setKey​(java.lang.String key)|
 void|setValue​(java.lang.String value)|
 java.lang.String|toString()|
-
-Tên Package: vn.mobifone.bigdata.callspamapi.repository
-Tên Class: SysConfigRepository
-Type Return|Method Name|Description
-SysConfigEntity|getByKey​(java.lang.String key)|
 

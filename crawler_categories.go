@@ -7,7 +7,6 @@ import (
 	"io/ioutil"
 	"strings"
 )
-
 var URLAllClass string = "C:/Users/Admin/Downloads/spam-voice/callspamapi/allclasses-index.html"
 var index = strings.LastIndex(URLAllClass,"/")
 var root = URLAllClass[:index+1]

@@ -5,24 +5,21 @@ import (
 	"fmt"
 	"io"
 	"io/ioutil"
+	"log"
 	"os"
 	"sync"
 )
 func main() {
-
 	var name string = "file_exported"
-
-	//if _, err := os.Stat("./output/"+name+".txt");  err != nil {
-	//	if os.IsExist(err) {
-	//		fmt.Println("in")
-	//		e := os.Remove("./output/"+name+".txt")
-	//		if e != nil {
-	//			log.Fatal(e)
-	//		}
-	//	} else {
-	//		// other error
-	//	}
-	//}
+	if _, err := os.Stat("./output/"+name+".txt"); err == nil {
+		fmt.Printf("File exists\n");
+				e := os.Remove("./output/"+name+".txt")
+				if e != nil {
+					log.Fatal(e)
+				}
+	} else {
+		fmt.Printf("File does not exist\n");
+	}
 	var wg sync.WaitGroup
 	file,_:=ioutil.ReadFile("categories.json")
 	categoires:=Categories{}
