@@ -7,6 +7,7 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
+	"strings"
 	"sync"
 )
 func main() {
@@ -42,13 +43,17 @@ func main() {
 	}
 	wg.Wait()
 }
+func standardizeSpaces(s string) string {
+	return strings.Join(strings.Fields(s), " ")
+}
 func writeToFile(methodReceive Methods,name string){
 	f, _ := os.OpenFile("./output/"+name+".txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
 	io.WriteString(f, "Tên Package: "+methodReceive.Package+"\n")
 	io.WriteString(f, "Tên Class: "+methodReceive.ClassTitle+"\n")
+
 	io.WriteString(f, "Type Return|"+"Method Name|"+"Description"+"\n")
 	for j:=0;j<len(methodReceive.List);j++{
-		io.WriteString(f, methodReceive.List[j].TypeReturn+"|"+methodReceive.List[j].MethodName+"|"+methodReceive.List[j].Description+"\n")
+		io.WriteString(f, standardizeSpaces(methodReceive.List[j].TypeReturn)+"|"+standardizeSpaces(methodReceive.List[j].MethodName)+"|"+standardizeSpaces(methodReceive.List[j].Description)+"\n")
 	}
 	io.WriteString(f, "\n")
 }
