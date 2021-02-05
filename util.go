@@ -24,14 +24,6 @@ func checkError(err error) {
 		log.Println(err)
 	}
 }
-
-//func main() {
-//	methods:=newMethods()
-//	doc:=getHTMLPage("C:/Users/Admin/Downloads/spam-voice/callspamapi/vn/mobifone/bigdata/callspamapi/utils/StringUtil.html")
-//	methods.getAllMethodInformation(doc,"StringUtil")
-//
-//}
-
 func (methods *Methods) getAllMethodInformation(doc *goquery.Document,className string){
 	//var wg sync.WaitGroup
 	checkHaveMethod := doc.Find(".method-summary .summary-table").Text()
@@ -59,8 +51,6 @@ func (methods *Methods) getAllMethodInformation(doc *goquery.Document,className 
 	}
 	if checkHaveMethod==""{
 		method:=Method{
-			//ClassTitle: className,
-			//Package: packageName,
 			Description: "",
 			MethodName: "",
 			TypeReturn: "",
