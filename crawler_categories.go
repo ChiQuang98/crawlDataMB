@@ -9,7 +9,16 @@ import (
 	"os"
 	"strings"
 )
-var URLAllClass string = "C:/Users/Admin/Downloads/spam-voice/callspamapi/allclasses-index.html"
+func readURL()string{
+	content, err := ioutil.ReadFile("path_url.txt")
+	if err != nil {
+		log.Fatal(err)
+	}
+	// Convert []byte to string and print to screen
+	text := string(content)
+	return text
+}
+var URLAllClass string = readURL()
 var index = strings.LastIndex(URLAllClass,"/")
 var root = URLAllClass[:index+1]
 func (categories *Categories) getAllCategories(doc *goquery.Document) {

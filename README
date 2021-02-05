@@ -3,3 +3,6 @@ RUN TWO CMD TO EXECUTE PROGRAM (In Terminal IDE or CMD Interface at File Project
 - go run main.go util.go data_type.go
 
 File output named: output/file_exported.txt
+
+NOTE:
+CHANGE PATH IN FILE path_url.txt BEFORE RUN FIRST CMD TO GET ALL CLASS CATEGORIES
