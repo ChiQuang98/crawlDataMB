@@ -43,6 +43,7 @@ func main() {
 	}
 	wg.Wait()
 }
+//Chuẩn hóa output
 func standardizeSpaces(s string) string {
 	return strings.Join(strings.Fields(s), " ")
 }
