@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"github.com/PuerkitoBio/goquery"
 	"io/ioutil"
+	"log"
+	"os"
 	"strings"
 )
 var URLAllClass string = "C:/Users/Admin/Downloads/spam-voice/callspamapi/allclasses-index.html"
@@ -26,6 +28,15 @@ func (categories *Categories) getAllCategories(doc *goquery.Document) {
 	})
 }
 func crawlAllCategories(){
+	if _, err := os.Stat("categories.json"); err == nil {
+		fmt.Printf("File exists\n");
+		e := os.Remove("categories.json")
+		if e != nil {
+			log.Fatal(e)
+		}
+	} else {
+		fmt.Printf("File does not exist\n");
+	}
 	categories := newCategoires()
 	res := getHTMLPage(URLAllClass)
 	categories.getAllCategories(res)

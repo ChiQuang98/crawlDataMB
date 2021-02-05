@@ -1,0 +1,5 @@
+RUN TWO CMD TO EXECUTE PROGRAM (In Terminal IDE or CMD Interface at File Project)
+- go run crawler_categories.go data_type.go util.go
+- go run main.go util.go data_type.go
+
+File output named: file_exported.txt

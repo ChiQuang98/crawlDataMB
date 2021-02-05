@@ -11,6 +11,7 @@ import (
 	"sync"
 )
 func main() {
+
 	var name string = "file_exported"
 	if _, err := os.Stat("./output/"+name+".txt"); err == nil {
 		fmt.Printf("File exists\n");
